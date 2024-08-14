@@ -1,0 +1,20 @@
+{
+  "name": "fermetures-routes-nocturnes",
+  "version": "1.0.0",
+  "description": "Application pour visualiser et gérer les fermetures de routes nocturnes.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server",
+    "build": "echo 'No build step required'"
+  },
+  "author": "Votre Nom",
+  "license": "MIT",
+  "dependencies": {
+    "fermetures-routes-nocturnes": "file:",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.4.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

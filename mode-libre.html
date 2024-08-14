@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="https://openlayers.org/favicon.ico" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mode Libre - Fermetures de Routes Nocturnes</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header>
+        <div id="title_page">
+            <p>Mode Libre - Fermetures de Routes Nocturnes</p>
+        </div>
+    </header>
+
+    <main>
+        <div id="second_one">
+            <div id="white_pane">
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </div>
+
+            <div id="interactive_map"></div>
+
+            <div id="infos">
+                <input type="button" id="show_file_mode" value="Afficher fermetures depuis fichier">
+                
+                <div id="choix_nuit">
+                    <div id="choix_nom">
+                        <span>Nom : </span>
+                        <input type="text" id="val_route" style="margin-left: 0.1em;">
+                        <select id="sel_direction">
+                            <option value="Yanky Y">Yanky Y</option>
+                            <option value="Whisky W">Whisky W</option>
+                            <option value="Interieur Int">Interieur Int</option>
+                            <option value="Exterieur Ext">Exterieur Ext</option>
+                        </select>
+                        <input type="color" id="color_selection" value="#FD5DEB">
+                    </div>
+            
+                    <div id="choix_section">
+                        <p>Section: </p>
+                        <select class="pr_value" id="sel_type">
+                            <option value="Toute la route">Toute la route</option>
+                            <option value="PR">PR</option>
+                            <option value="Surnom">Surnom</option>
+                        </select>
+                        <div id="hidden_didier">
+                            <input type="text" class="pr_value">
+                            <span id="preposition">à </span>
+                            <input type="text" class="pr_value">
+                        </div>
+                    </div>
+                        <input type="button" value="Supprimer toutes les couches" id="del_layers">
+                </div>
+
+                <div id="last_buttons">
+                    <input id="check_errors" type="button" value="Vérifier incompatibilités">
+                </div>
+            </div>
+        </div>
+
+        <div id="export_section">
+            <select id="export_format">
+                <option value="png">PNG</option>
+                <option value="jpeg">JPEG</option>
+                <option value="pdf">PDF</option>
+            </select>
+            <button id="export_map">Exporter carte</button>
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="index.html">Retour au mode fichier</a></li>
+            <li>@Copyright DiRI</li>
+        </ul>
+    </footer>
+
+    <!-- Charger les scripts à la fin du body -->
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/afficher_route.js"></script>
+    <script type="module" src="./js/index.js"></script>
+</body>
+</html>

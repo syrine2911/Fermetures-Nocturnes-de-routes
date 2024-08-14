@@ -1,0 +1,628 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: #2D52D1; /* Nouvelle couleur du bandeau */
+}
+
+header div {
+    text-align: center;
+    padding: 3em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#title_page p {
+    color: white;
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Police sans style particulier */
+    font-size: 2em;
+}
+
+#title_page {
+    width: 50%;
+}
+
+main {
+    margin: 1em;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+}
+
+#second_one {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+#interactive_map {
+    width: 70%;
+    height: 97vh;
+}
+
+#infos {
+    width: 30%;
+    padding: 1em;
+}
+
+@media (max-width: 920px) {
+    #second_one {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #interactive_map {
+        width: 100%;
+    }
+
+    #infos {
+        width: 80%;
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+    }
+}
+
+#contenu {
+    width: 140%; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#affichage_ferm {
+    flex-wrap: wrap;
+}
+
+#loading-spinner {
+    display: none;
+}
+
+#load_but {
+    width: 20%;
+}
+
+#fichiers {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+
+#add_file, #add_dico, #add_inco {
+    width: 50%;
+}
+
+.loaded_file {
+    width: 28%;
+    visibility: hidden;
+}
+
+#fichiers span {
+    width: 21%;
+}
+
+#contenu > div {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2em;
+}
+
+#calendar {
+    width: 35%;
+}
+
+#voir_carte {
+    visibility: hidden;
+}
+
+#show_file_mode {
+    visibility: hidden;   
+}
+
+#add_line {
+    visibility: hidden;   
+}
+
+#sel_action {
+    visibility: hidden;   
+}
+
+#el_tableau {
+    max-height: 6em;
+    margin-bottom: 0.5em;
+}
+
+#last_buttons {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#check_errors {
+    display: inline-block;
+}
+
+#del_layers {
+    display: inline-block;
+
+}
+
+#add_line, #check_errors, #voir_carte, #del_layers, #lire_ligne, #export_map {
+    background-color: #847FFE; /* Couleur des boutons */
+    color: white;
+    border: none;
+    width: auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+    margin: 5px;
+    display: inline-block;
+}
+
+#check_errors {
+    background-color: #5a3e91; /* Couleur plus foncée pour le bouton "Vérifier incompatibilités" */
+}
+
+/* Styles pour le survol des boutons */
+button:hover, input[type="button"]:hover, input[type="file"]:hover {
+    background-color: #6b5cf7; /* Couleur de fond au survol */
+    transform: translateY(-2px); /* Légère élévation */
+}
+
+/* Styles pour le clic sur les boutons */
+button:active, input[type="button"]:active, input[type="file"]:active {
+    background-color: #5947e1; /* Couleur de fond lors du clic */
+    transform: translateY(0); /* Annuler l'élévation */
+}
+
+/* Ajustements pour les icônes dans les boutons */
+button i, input[type="button"] i {
+    margin-right: 5px; /* Espacement entre l'icône et le texte */
+}
+
+#tableau_fermetures {
+    border-collapse: collapse;
+    width: 100%; /* S'assurer que le tableau prend toute la largeur disponible */
+    margin: 0 auto; /* Centrer le tableau horizontalement */
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    word-break: break-all;
+}
+
+#tableau_fermetures td {
+    text-align: center;
+}
+
+#tableau_fermetures td, #tableau_fermetures th {
+    padding: 5px; /* Réduire la taille des cellules du tableau */
+    font-size: 0.9em; /* Réduire la taille de la police du tableau */
+}
+
+
+#tableau_fermetures thead {
+    font-weight: bold;
+    border: 1px solid white;
+    color: white;
+    background-color: #6b5cf7;
+}
+
+.fa-times {
+    color: black;
+    transition: 0.1s;
+}
+
+.fa-times:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.fa-times:active {
+    color: rgb(212, 167, 167);
+    transition: 0s;
+}
+
+.rowy:nth-child(even) {
+    background-color: rgba(113, 180, 252, 0.321);
+}
+
+#choix_nuit {
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 5px;
+    max-height: 15em; /* Réduire la hauteur maximale de la section de choix de fermeture */
+    overflow-y: auto; /* Permettre le défilement si nécessaire */
+    padding: 1em;
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 2em;
+}
+
+#sel_direction, #val_route {
+    width: 40%;
+}
+
+#sel_type {
+    width: 50%;
+}
+
+#choix_section {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 1em;
+    align-items: center;
+}
+
+#hidden_didier {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+
+#choix_nom {
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#color_selection {
+    height: 100%;
+    border: none;
+    padding: 0%;
+}
+
+#choix_nom span {
+    width: 15%;
+}
+
+.pr_value {
+    width: 20%;
+    margin: 1em;
+}
+
+#second_one {
+    border: 0.5px solid gray;
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.264);
+}
+
+#last_one {
+    margin-bottom: 1em;
+}
+
+#INC {
+    margin-left: auto;
+    width: 50%;
+}
+
+#errors {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+#infos_bas_page p:nth-child(2) {
+    border: 1px solid;
+}
+
+#infos_bas_page {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Autres styles existants pour les éléments spécifiques */
+#add_line:hover, #check_errors:hover, #voir_carte:hover, #del_layers:hover, #lire_ligne:hover, #export_map:hover {
+    cursor: pointer;
+    background-color: #6b5cf7; /* Couleur lors du survol */
+}
+
+#add_line:active, #check_errors:active, #voir_carte:active, #del_layers:active, #lire_ligne:active, #export_map:active {
+    color: rgb(105, 146, 250); /* Couleur lors du clic */
+    border: 1px solid white;
+}
+
+/* Boutons pour choisir des fichiers sans styles */
+input[type="file"] {
+    padding: 10px 0; /* Ajuster le padding pour les boutons de fichier */
+    font-size: 16px; /* Assurer une taille de police cohérente */
+}
+
+/* Styles de base pour tous les boutons */
+button, input[type="button"] {
+    background-color: #847FFE; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    border: none; /* Supprimer les bordures par défaut */
+    padding: 10px 20px; /* Ajouter de l'espace interne */
+    border-radius: 5px; /* Arrondir les coins */
+    box-shadow: 0 2px 5px;
+    /*rgba(0, 0, 0, 0.2); /* Ajouter un léger ombrage */
+    cursor: pointer; /* Changer le curseur au survol */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition pour les changements */
+    font-size: 16px; /* Taille de police */
+    margin: 5px; /* Espacement entre les boutons */
+}
+
+/* Styles pour le survol des boutons */
+button:hover, input[type="button"]:hover {
+    background-color: #6b5cf7; /* Couleur de fond au survol */
+    transform: translateY(-2px); /* Légère élévation */
+}
+
+/* Styles pour le clic sur les boutons */
+button:active, input[type="button"]:active {
+    background-color: #5947e1; /* Couleur de fond lors du clic */
+    transform: translateY(0); /* Annuler l'élévation */
+}
+
+#INC_son table {
+    box-shadow: 5px 5px 5px gray;
+    width: 50%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#INC_son td {
+    border: 1px solid rgb(187, 187, 187);
+}
+
+.small {
+    width: 10%;
+}
+
+.bigone {
+    width: 45%;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    width: fit-content;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+footer li {
+    margin: 2em;
+    color: white;
+}
+
+footer a {
+    color: gray;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: rgb(86, 86, 86);
+}
+
+footer {
+    background: #2D52D1; /* Nouvelle couleur du bandeau */
+    border: 1px solid transparent;
+}
+
+#white_pane {
+    background-color: rgba(255, 255, 255, 0.405);
+    position: absolute;
+    z-index: 98;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.lds-ring {
+    display: inline-block;
+    z-index: 99;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.405);
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #546ecc transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+#prevDayBtn, #nextDayBtn {
+    background-color: #847FFE;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#action_buttons input[type="button"] {
+    background-color: #847FFE; /* Couleur des boutons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+    margin: 5px;
+}
+
+#action_buttons input[type="button"]:hover {
+    background-color: #6b5cf7; /* Couleur de fond au survol */
+    transform: translateY(-2px); /* Légère élévation */
+}
+
+#action_buttons input[type="button"]:active {
+    background-color: #5947e1; /* Couleur de fond lors du clic */
+    transform: translateY(0); /* Annuler l'élévation */
+}
+
+
+#prevDayBtn:hover, #nextDayBtn:hover {
+    background-color: #6b5cf7;
+    transform: translateY(-2px);
+}
+
+#prevDayBtn:active, #nextDayBtn:active {
+    background-color: #5947e1;
+    transform: translateY(0);
+}
+
+#choix_nuit {
+    display: block !important; /* Force l'affichage pour test */
+}
+
+
+#export_map {
+    display: inline-block;
+    margin: 10px auto;
+    background-color: #847FFE;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#export_map:hover {
+    background-color: #6b5cf7;
+    transform: translateY(-2px);
+}
+
+#export_map:active {
+    background-color: #5947e1;
+    transform: translateY(0);
+}
+
+#export_section {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#export_format {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #847FFE;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+#export_format:hover {
+    border-color: #6b5cf7;
+}
+
+#export_format:active {
+    border-color: #5947e1;
+}
+
+header {
+    background-color: #2D52D1;
+}
+
+footer {
+    background-color: #2D52D1;
+}
+
+/* Styles pour le popup */
+.ol-popup {
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    bottom: 12px;
+    left: -50px;
+    min-width: 200px;
+}
+
+.ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ol-popup:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: white;
+    border-width: 10px;
+    left: 48px;
+    margin-left: -10px;
+}
+
+.ol-popup:before {
+    border-color: rgba(204, 204, 204, 0);
+    border-top-color: #ccc;
+    border-width: 11px;
+    left: 48px;
+    margin-left: -11px;
+}
+
+.ol-popup-closer {
+    text-decoration: none;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+}
+
+@media (max-width: 920px) {
+    #errors {
+        width: 49%;
+        flex-direction: column;
+    }
+
+    #last_one {
+        width: 90%;
+    }
+
+    #error_log2 {
+        width: 100%;
+    }
+}
+

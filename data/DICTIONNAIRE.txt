@@ -1,0 +1,149 @@
+A1:
+Chapelle>Roissy : 0a16+300
+Roissy>Chapelle : 0a16+300
+Chapelle>BDL:0a7
+BDL>Chapelle:0a7
+Chapelle>ADP:0a19+500
+ADP>Chapelle:0a19+500
+Soissons>Roissy:12+445a16+300
+Roissy>Soissons:12+445a16+300
+Soissons>ADP:12+445a19+500
+ADP>Soissons:12+445a19+500
+Soissons>SANEF:12+445a21+699
+SANEF>Soissons:12+445a21+699
+Chapelle>SANEF:0a21+699
+SANEF>Chapelle:0a21+699
+SANEF>Roissy:16+300a21+699
+Roissy>SANEF:16+300a21+699
+
+A3:
+roissy>Bagnolet:0a18+318
+Bagnolet>Roissy:0a18+318
+Bondy>Roissy:7+200a18+318
+Roissy>Bondy:7+700a18+318
+Rosny>Bagnolet:0a6+300
+Bagnolet>Rosny:0a6+300
+Bagnolet>Bobigny:0a7+200
+Bobigny>Bagnolet:0a7+200
+Bobigny>Roissy:7a20
+Roissy>Bobigny:7a20
+PR16>Roissy:16a18+318
+Roissy>PR16:16a30
+ADP>Bobigny:7a18+318
+Bobigny>ADP:7a18+318
+ADP>Bagnolet:0a18+318
+Bagnolet>ADP:0a18+318
+
+BP:
+Bagnolet > Maillot	:30+0 a 16+0
+Pantin > Maillot	:27+0 a 16+0
+Asnieres > Champerret	:19+0 a 17+0
+Asnieres > Auteuil	:18+0 a 12+0
+Asnieres > Chatillon	:18+0 a 6+0
+Maillot > Auteuil	:16+0 a 12+0
+Maillot > Brancion	:16+0 a 7+0
+Maillot > Chatillon	:16+0 a 6+0
+Maillot > Quai Issy	:16+0 a 10+0
+Muette > Auteuil	:15+500 a 12+0
+Muette > Brancion	:15+500 a 7+0
+Brancion > Bercy	:7+0 a 0+0
+Brancion > Bagnolet	:7+0 a 30+0
+Brancion > Pantin	:7+0 a 27+0
+Gentilly > Quai Ivry	:4+0 a 0+500
+Gentilly > Muette	:4+0 a 14+0
+Gentilly > Dauphine	:4+0 a 15+0
+Brancion > Muette	:8+0 a 14+0
+Quai Issy > Muette	:10+0 a 15+0
+Quai Issy > Maillot	:10+0 a 16+0
+Quai Issy > Chapelle	:10+0 a 23+0
+Dauphine > Asnieres	:15+0 a 18+0
+Dauphine > Chapelle	:15+0 a 23+0
+Dauphine > Lilas	:15+0 a 28+0
+Dauphine > Bagnolet	:15+0 a 30+0
+Pantin > Brancion	:27+0 a 7+0
+Lilas > Brancion	:28+0 a 7+0
+Lilas > Orleans	        :28+0 a 5+0
+Vincennes > Ivry	:32+0 a 1+0
+
+
+BP>Arcueil:0a2+695
+Arcueil>BP:0a2+695
+MA>Comp:0a10
+Comp>Ma:0a10
+N7>A10:35a59
+A10>N7:35a59
+PR14>D444:14a3
+D444>PR14:14a3
+D444>Orsay:3a16
+Orsay>D444:3a16
+A3>D7:26+261a11+400
+D7>A3:26+261a11+400
+Roissy>Bobigny:7a30
+BP>Hay:0a4+200
+Hay>BP:0a4+200
+N4>A4:0a6+922
+A4>N4:0a6+922
+A86>A13:4a21
+A13>A86:4a21
+A3>A4:26a33
+A4>A3:26a33
+A86>N19:0a10
+N19>A86:0a10
+D34>N2:0a18+500
+N2>D34:0a18+500
+PR2>Hay:2a3+611
+Hay>PR2:2a3+611
+A6>A4:34a50+700
+A4>A6:34a50+700
+N13>A86 +Tunnel:0a5
+A86>N13 + Tunnel:0a5
+N13>A86:0a4+400
+A86>N13:0a4+400
+Sortie 4 a 8:6a13+500
+A15>Sortie 8:8+246a13+500
+N20>A6:50+500a53
+A6>N20:50+500a53
+N4>A5b : 7a21
+A5b>N4: 7a21
+A15>D7:8+246a13
+D7>A15:8+246a13
+VLA4>D404:20+700a30
+92>SdF:12a14+600
+SDF>92:12a14+600
+N19>N4:6+936a15+500
+N4>N19:6+936a15+500
+N7>D19:35+122a44+400
+D19>N7:35+122a44+400
+A10>D19:44+600a60
+D19>A10:44+600a60
+A3>77:0a8
+77>A3:0a8
+PR9>BP:0a9
+P2>hay:0a8
+
+A86_A4>D5:35a43
+A86_D5>A4:35a43
+A14_Tunnel:0a4+280
+N104_A5A>A6:27+940a37
+N104_A6>A5A:27+940a37
+N104_A5b>N6:20a28
+N104_N6>A5b:20a28
+A115_Tunnel:5+800a8+300
+N19_Tunnel:16+700a18+800
+N104_A6>A10:40a60
+N104_A10>A6:40a60
+A126_A6>A10:0a4
+A126_A10>A6:0a4
+A86_D7>SDF:7a9
+A86_A4>N6:35a40+800
+A86_N6>A4:35a40+800
+A86_A6>N6:48+500a50
+A86_N6>A6:48+500a50
+A86_BDL>A3:17a24
+A86_A3>BDL:17a24
+A86_BDL>N410:12+800a13+800
+A86_SDF>BDL:14a17
+A86_N410>D7:12a13
+
+
+
